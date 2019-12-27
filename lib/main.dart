@@ -1,4 +1,5 @@
 import 'package:app/pages/cals_burned.dart';
+import 'package:app/pages/home.dart';
 import 'package:app/pages/map.dart';
 import 'package:app/pages/step_counts.dart';
 import 'package:flutter/material.dart';
@@ -11,7 +12,16 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 'Flutter Demo',
-      home: MapPage(),
+      theme: ThemeData(
+        bottomSheetTheme: BottomSheetThemeData(
+          backgroundColor: Colors.transparent,
+          shape: RoundedRectangleBorder(
+            borderRadius: BorderRadius.circular(40),
+
+          )
+        )
+      ),
+      home: HomeScreen(),
     );
   }
 }
